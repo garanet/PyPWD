@@ -1,0 +1,9 @@
+
+cryptography==2.7
+numpy==1.17.0
+pandas==0.25.0
+pyAesCrypt==0.4.3
+PyQt5==5.13.0
+PyQt5-sip==4.19.18
+python-dateutil==2.8.0
+six==1.12.0
