@@ -12,10 +12,15 @@ I think is better to combine my basic python skills with what I need, then I cre
 
 ### Requirements:
 Tested on a MacOSX, working also in Linux
+
 Python3
+
 Pandas
+
 cryptography
+
 pyAesCrypt
+
 PyQt5
 
 ### How Works:
@@ -28,16 +33,27 @@ PyPWD > Dencrypts the password file, based of the username and password filled.
 
 ### Features
 Search Password
+
 Show All Password
+
 Copy the table cell content via double-click
+
 Create New Password + random creation button
+
 Delete password
+
 Config Language
+
 Config Encoding
+
 Export all cleaned password in excel
+
 Export encrypted backup for PyPWD
+
 Import encrypted backup for PyPWD
+
 Reset all password
+
 Change master password
 
 ### Installation:
