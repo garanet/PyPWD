@@ -25,8 +25,9 @@ PyQt5
 
 ### How Works:
 First Run:
-PyPWD > Creates Master Key with Password (Do not forget it or change the configfile, otherwise you'll be not able to open your password anymore).
-PyPWD > Saves a DataFrame as CVS but as encrypted files with encrypted the encrypted password.
+PyPWD > Creates Master Key with your master username and password (Do not forget it or modify the configfile, otherwise you'll be not able to open your password manager anymore).
+
+PyPWD > Saves a DataFrame as an encrypted CVS and all passwords are the encrypted too, with key and the master password.
 
 Login:
 PyPWD > Dencrypts the password file, based of the username and password filled.
