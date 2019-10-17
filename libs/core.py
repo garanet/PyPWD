@@ -50,10 +50,10 @@ class core:
             timestart =  result[1]
             core.timeout(timestart)
             f.close()
-            return None
+            return True
         except:            
             core.exit_now('','')
-            return None
+            return False
         return None
 
     ### Calculate the Session Timeout
@@ -99,7 +99,6 @@ class core:
     ### Restart the APP for the first login
     def restart():
         eapp = os.getcwd()
-        print(eapp)
         os.execv('{}/pypwd.py'.format(eapp), sys.argv)        
         sys.exit()
         return None    

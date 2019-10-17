@@ -1,7 +1,7 @@
 secout = 360
-encoding = "utf-8"
+encoding = "UTF-8"
 language = "English"
-key = '' 
+key = ''
 rand = "SuCAabc1234!?$*&()'-=@~"
 # --------------------------------------------------------------------#
 filename = 'pwdmng.aes'

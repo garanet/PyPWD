@@ -9,6 +9,7 @@ class Ui_loginmenu(object):
     def setupUi(self, loginmenu):
         loginmenu.setObjectName("loginmenu")
         loginmenu.resize(352, 178)
+        loginmenu.setWindowModality(QtCore.Qt.ApplicationModal)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -54,7 +55,6 @@ class Ui_loginmenu(object):
         
         ### Action Buttons
         self.pushButton_ok.clicked.connect(self.checkLogin)        
-        
     def retranslateUi(self, loginmenu):
         _translate = QtCore.QCoreApplication.translate
         loginmenu.setWindowTitle(_translate("loginmenu", LWTE))
@@ -63,6 +63,13 @@ class Ui_loginmenu(object):
         self.pushButton_ok.setText(_translate("loginmenu", LBOK))
         self.msgdialog.setText(_translate("loginmenu", LFUP))
         self.msgdialog_2.setText(_translate("loginmenu", LMSG))
+        
+    def closeEvent(self, event):        
+        try:            
+            f = open(sessiontmp,"r")
+            pass
+        except:
+            core.exit_now('','')
 
     ### Check Login function    
     def checkLogin(self, loginmenu):

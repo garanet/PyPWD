@@ -8,23 +8,26 @@ from loginmenu import *
 from mainmenu import *
 #######################################################
 class Login(QtWidgets.QWidget, Ui_loginmenu):    
-    switch_window = QtCore.pyqtSignal()
+    switch_window = QtCore.pyqtSignal()    
     def __init__(self):
         QtWidgets.QWidget.__init__(self)
         self.setupUi(self)
         return None
+
 class MainWindow(QtWidgets.QWidget, Ui_MainMenu):
     switch_window = QtCore.pyqtSignal()
     def __init__(self):
         QtWidgets.QWidget.__init__(self)
         self.setupUi(self)
         return None
+        
 class CreateMaster(QtWidgets.QWidget, Ui_createmaster):
     switch_window = QtCore.pyqtSignal()
     def __init__(self):
         QtWidgets.QWidget.__init__(self)
         self.setupUi(self)
         return None
+    
 #######################################################        
 class Controller:
     def __init__(self):
@@ -33,13 +36,9 @@ class Controller:
     def show_login(self):
         self.login = Login()
         self.login.switch_window.connect(self.show_main)
-        try:
-            self.create.close()    
-        except:
-            self.login.close()
         self.login.show()
         return None
-
+            
     def show_main(self):
         self.window = MainWindow()
         try:

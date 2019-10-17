@@ -13,7 +13,7 @@ APP = ['pypwd.py']
 DATA_FILES = [('libs', glob('libs/*.py')),'app.icns']
 OPTIONS = {
 	'iconfile':'app.icns',
-	'argv_emulation': False,
+	'argv_emulation': True,
 	 'plist': {
 	        'CFBundleName': APP_NAME,
 	        'CFBundleDisplayName': APP_NAME,
@@ -24,11 +24,7 @@ OPTIONS = {
 	        'NSHumanReadableCopyright': u"Copyright © 2005-2019 Garanet. All Rights Reserved"
 	    },	
     'compressed': True,
-	'packages': ['numpy','pandas','pyAesCrypt','cryptography']
-    #'includes': ['PyQt5.QtCore','PyQt5.QtGui','PyQt5.QtWidgets'],
- 
-	# 'includes': ["asn1crypto", "six", "pycparser", "cffi", "numpy", "pytz", "pandas", "pyAesCrypt", "PyQt5.QtWidgets", "PyQt5.QtGui", "PyQt5.QtCore", "cryptography.Fernet","cryptography.hazmat"],
- #   	'excludes': ['PyQt5.QtDesigner', 'PyQt5.QtNetwork', 'PyQt5.QtOpenGL', 'PyQt5.QtScript', 'PyQt5.QtSql', 'PyQt5.QtTest', 'PyQt5.QtWebKit', 'PyQt5.QtXml', 'PyQt5.phonon','pandas.test.*','numpy.test.*', 'pydoc_topics','pysqlite2','pytest','docutils','pyarrow','sqlalchemy']
+	'packages': ['numpy','pandas','pyAesCrypt','cryptography','PyQt5-sip','PyQt5']
 }
 
 setup(

@@ -8,7 +8,7 @@ class Ui_createpwd(object):
     def setupUi(self, createpwd):
         createpwd.setObjectName("createpwd")
         createpwd.resize(354, 313)
-        createpwd.setWindowModality(QtCore.Qt.NonModal)
+        createpwd.setWindowModality(QtCore.Qt.ApplicationModal)        
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)

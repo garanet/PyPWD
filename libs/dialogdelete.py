@@ -8,6 +8,7 @@ class Ui_DialogDelete(object):
     def setupUi(self, DialogDelete):
         DialogDelete.setObjectName("DialogDelete")
         DialogDelete.resize(391, 160)
+        DialogDelete.setWindowModality(QtCore.Qt.ApplicationModal)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)

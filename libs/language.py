@@ -8,7 +8,7 @@ from configfile import *
 optlang = ['English','Italian']
 
 ### Define Encoding List
-optenco = ['utf-8','iso-8859-1','UTF-16','UTF-32']
+optenco = ['UTF-8','ISO-8859-1','UTF-16','UTF-32']
 
 ### Check language config
 if language == 'English':

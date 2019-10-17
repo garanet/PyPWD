@@ -87,6 +87,14 @@ class Ui_createmaster(object):
         self.label_5.setText(_translate("createmaster", CMRB))
         self.pushSave.setText(_translate("createmaster", CMSP))
 
+    ### Prevent Segment error 11
+    def closeEvent(self, event):        
+        try:            
+            f = open(sessiontmp,"r")
+            pass
+        except:
+            core.exit_now('','')
+            
     ### Create the first username and password to encrypt the file
     def masterpassword(self):
         df = pd.DataFrame()

@@ -6,7 +6,7 @@ from core import *
 class Ui_Options(object):
     def setupUi(self, Options):
         Options.setObjectName("Options")
-        Options.setWindowModality(QtCore.Qt.NonModal)
+        Options.setWindowModality(QtCore.Qt.ApplicationModal)
         Options.resize(409, 513)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)

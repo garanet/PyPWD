@@ -19,6 +19,7 @@ class Ui_MainMenu(object):
         MainMenu.setMaximumSize(QtCore.QSize(1024, 768))
         MainMenu.setFocusPolicy(QtCore.Qt.WheelFocus)
         MainMenu.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        MainMenu.setWindowModality(QtCore.Qt.ApplicationModal)
         self.lineSearch = QtWidgets.QLineEdit(MainMenu)
         self.lineSearch.setGeometry(QtCore.QRect(20, 40, 211, 31))
         self.pushButton_search = QtWidgets.QPushButton(MainMenu)
@@ -139,7 +140,12 @@ class Ui_MainMenu(object):
         self.optionlabel.setText(_translate("MainMenu", MMSO))
         self.label_copy.setText(_translate("MainMenu", "Copyright © Garanet.net 2019 - This copy is not for commercial use"))
 
-    ### Exit/Close all
+    ### Close MainMenu without normal exit
+    def closeEvent(self, event):
+        core.exit_now('','')
+        return None
+    
+    ### Exit/Close all (button)
     def reject(self):
         self.tableWidget.setRowCount(0);
         self.tableWidget.setColumnCount(0); 
@@ -152,7 +158,8 @@ class Ui_MainMenu(object):
             row_number = idx.row()
             column_number = idx.column()
         cc = self.tableWidget.item(row_number,column_number)
-        os.system("echo '%s' | pbcopy" % cc.text())
+        cc = cc.text()
+        os.system("echo {}|pbcopy %".format(cc))
         self.msg_label.setText(MMPC)
         self.repaint()
         return None
