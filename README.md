@@ -70,10 +70,10 @@ Change master password
 ### Compile APP for MAC
 :# python3 setup.py py2app --qt-plugins
 
-### Download a Compipled APP for MacOSX Catalina
+### Download an already Compiled APP for MacOSX Catalina
 
 https://sourceforge.net/projects/pypwd/files/
 
-MD5 (PyPWD.app.zip) = df52f43ecaa3cf6b40de1325a5e52f49
+FILE PyPWD.app.zip => MD5 = df52f43ecaa3cf6b40de1325a5e52f49
 
 
